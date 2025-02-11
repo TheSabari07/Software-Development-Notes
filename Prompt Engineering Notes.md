@@ -206,3 +206,6 @@ Then, combine the sections.
 
 Mastering prompt engineering is **like giving clear instructions to a skilled assistant**. The better your prompt, the better the response. Keep practicing these rules to improve your results!
 
+> Will update more in the coming days.
+
+
