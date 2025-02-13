@@ -197,3 +197,187 @@ console.log(result2); // 30 (Parentheses first)
 ```
 
 ---
+
+
+# JavaScript Basics
+
+---
+
+## 1. `window.prompt()` – User Input Dialog
+
+### What is `window.prompt()`?
+
+`window.prompt()` displays a popup box that asks the user for input.
+
+- The value entered is always a **string**.
+- The user must click **OK** or **Cancel** to continue.
+
+### Example:
+
+```jsx
+let userName = window.prompt("Enter your name:");
+console.log("Hello, " + userName);
+
+```
+
+### Behavior:
+
+| User Action | Output |
+| --- | --- |
+| Enters "John" | `Hello, John` |
+| Clicks Cancel | `userName` will be `null` |
+
+---
+
+## 2. `.value` – Access or Modify Input Field Values
+
+### What is `.value`?
+
+`.value` is used to get or set the value of an HTML input field.
+
+### Example 1: Reading Input Value
+
+```html
+<input type="text" id="nameInput" value="Default Name">
+<script>
+  let name = document.getElementById("nameInput").value;
+  console.log(name); // Output: "Default Name"
+</script>
+
+```
+
+### Example 2: Changing Input Value
+
+```html
+<input type="text" id="nameInput">
+<button onclick="changeValue()">Set Name</button>
+<script>
+  function changeValue() {
+    document.getElementById("nameInput").value = "Updated Name";
+  }
+</script>
+
+```
+
+**Behavior:** When the button is clicked, the text field value will change to `"Updated Name"`.
+
+---
+
+## 3. Type Conversion
+
+### What is Type Conversion?
+
+Type conversion changes a value from one data type to another.
+
+- JavaScript automatically converts types in some cases (**implicit conversion**).
+- We can also do it manually (**explicit conversion**).
+
+### Why is Type Conversion Important?
+
+- Prevents unexpected errors when working with different data types.
+- Ensures that operations like mathematical calculations work correctly.
+
+### Examples of Type Conversion:
+
+| Function | Converts To | Example | Output |
+| --- | --- | --- | --- |
+| `Number(value)` | Number | `Number("42")` | `42` |
+| `String(value)` | String | `String(100)` | `"100"` |
+| `Boolean(value)` | Boolean | `Boolean(1)` | `true` |
+| `parseInt(value)` | Integer | `parseInt("20px")` | `20` |
+| `parseFloat(value)` | Decimal Number | `parseFloat("10.5")` | `10.5` |
+
+### Example 1: String to Number
+
+```jsx
+let str = "123";
+let num = Number(str);
+console.log(num, typeof num); // Output: 123 "number"
+
+```
+
+### Example 2: Number to String
+
+```jsx
+let num = 50;
+let str = String(num);
+console.log(str, typeof str); // Output: "50" "string"
+
+```
+
+### Example 3: Boolean Conversion
+
+```jsx
+console.log(Boolean(0));    // Output: false
+console.log(Boolean(1));    // Output: true
+console.log(Boolean(""));   // Output: false
+console.log(Boolean("Hi")); // Output: true
+
+```
+
+---
+
+## 4. `let`, `const`, and `var` – Declaring Variables
+
+### Difference Between `let`, `const`, and `var`
+
+| Feature | `let` | `const` | `var` |
+| --- | --- | --- | --- |
+| Can be reassigned? | Yes | No | Yes |
+| Must be initialized? | No | Yes | No |
+| Block-scoped? | Yes | Yes | No (function-scoped) |
+| Hoisted? | Yes (not initialized) | Yes (not initialized) | Yes (initialized with `undefined`) |
+
+### 1. `let` – Used for Changeable Variables
+
+```jsx
+let age = 25;
+age = 26; // Allowed
+console.log(age); // Output: 26
+
+```
+
+### 2. `const` – Used for Fixed Values
+
+```jsx
+const PI = 3.1415;
+PI = 3.14; // Error: Assignment to constant variable
+
+```
+
+### Exception: Objects and arrays declared with `const` can be modified.
+
+```jsx
+const person = { name: "Alice" };
+person.name = "Bob"; // Allowed
+console.log(person.name); // Output: Bob
+
+```
+
+### 3. `var` – Older Way to Declare Variables
+
+```jsx
+var city = "New York";
+var city = "London"; // Allowed (but not recommended)
+console.log(city); // Output: London
+
+```
+
+### Issue with `var`:
+
+```jsx
+if (true) {
+  var test = "Hello";
+}
+console.log(test); // Works (but should be block-scoped)
+
+```
+
+---
+
+## Conclusion
+
+- Use `let` when the value needs to change.
+- Use `const` when the value should not change.
+- Avoid `var`, as it can cause unexpected behavior.
+---
