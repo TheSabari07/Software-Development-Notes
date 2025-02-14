@@ -135,5 +135,34 @@ Hello, Alice!
 
 ---
 
-> *Will update more in the coming days.*
+## **7. Identifiers**
+
+Identifiers are the names used for variables, functions, classes, and other objects in Python. They help label data and instructions in a program.
+
+---
+
+### **Rules for Identifiers**
+
+| **Rule** | **Description** |
+|---------|----------------|
+| **Can Contain Letters, Digits, and Underscores (`_`)** | Example: `my_variable`, `user1`, `temp_value` |
+| **Cannot Start with a Digit** | Correct: `var1`, `_name` <br> Incorrect: `1var` (Invalid) |
+| **Cannot Use Special Characters (`@`, `#`, `$`, etc.)** | Incorrect: `user@name`, `price#` |
+| **Case-Sensitive** | `name` and `Name` are different identifiers |
+| **Cannot Use Python Keywords** | Incorrect: `if = 10` (Invalid) |
+| **Can Start with an Underscore (`_`), but Used for Special Cases** | `_variable`: Used for internal/private variables <br> `__var__`: Used for special methods (dunder methods) |
+
+---
+
+### **Example Identifiers in Python**
+```python
+name = "John"  # Valid identifier
+_age = 25      # Valid, starts with underscore
+user1 = "Alice"  # Valid, contains letters and digits
+
+2user = "Bob"  # Invalid, starts with a digit
+class = "Math"  # Invalid, uses a reserved keyword
+```
+
+---
 
