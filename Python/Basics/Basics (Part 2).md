@@ -165,4 +165,74 @@ class = "Math"  # Invalid, uses a reserved keyword
 ```
 
 ---
+# 8.Python Keywords
 
+ **Keywords** are reserved words in Python that have a predefined meaning. They cannot be used as variable names, function names, or identifiers.
+
+---
+
+## List of Python Keywords
+
+| Keyword   | Description |
+|-----------|-------------|
+| `False`   | Boolean false value |
+| `None`    | Represents a null value |
+| `True`    | Boolean true value |
+| `and`     | Logical AND operator |
+| `as`      | Used in aliasing (e.g., `import module as alias`) |
+| `assert`  | Used for debugging |
+| `break`   | Exits a loop early |
+| `class`   | Defines a class |
+| `continue` | Skips the current loop iteration |
+| `def`     | Defines a function |
+| `del`     | Deletes an object |
+| `elif`    | Else if condition |
+| `else`    | Defines an alternative block |
+| `except`  | Handles exceptions |
+| `finally` | Cleanup code in exceptions |
+| `for`     | Loop structure |
+| `from`    | Imports specific parts of a module |
+| `global`  | Declares a global variable |
+| `if`      | Conditional statement |
+| `import`  | Imports a module |
+| `in`      | Checks membership in a sequence |
+| `is`      | Identity comparison |
+| `lambda`  | Anonymous function |
+| `nonlocal` | Modifies a variable in the outer scope |
+| `not`     | Logical NOT operator |
+| `or`      | Logical OR operator |
+| `pass`    | Placeholder statement |
+| `raise`   | Raises an exception |
+| `return`  | Returns a value from a function |
+| `try`     | Starts an exception block |
+| `while`   | Loop structure |
+| `with`    | Simplifies exception handling |
+| `yield`   | Returns a generator |
+
+---
+
+## Rules for Using Keywords in Python
+
+### Allowed
+- Use them only for their intended purpose.
+- Write them in **lowercase** (except `True`, `False`, and `None`).
+
+### Not Allowed
+- Do **not** use them as variable names.
+- Do **not** modify their meaning.
+
+---
+
+## Example of Incorrect and Correct Usage
+
+```python
+# Incorrect
+def for():  
+    pass  # 'for' is a reserved keyword
+
+# Correct
+def loop_example():  
+    for i in range(5):  
+        print(i)
+```
+---
