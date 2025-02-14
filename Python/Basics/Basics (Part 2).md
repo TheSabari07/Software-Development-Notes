@@ -236,3 +236,42 @@ def loop_example():
         print(i)
 ```
 ---
+# 9.Camel Casing
+
+ **Camel casing** is a way of writing names where the first word is in lowercase, and every following word starts with a capital letter. There are no spaces or underscores.
+
+---
+
+## Example of Camel Casing
+
+| Type | Example |
+|------|---------|
+| Correct | `myVariableName` |
+| Incorrect | `my_variable_name` (snake_case) |
+| Incorrect | `Myvariablename` |
+
+---
+
+## Use Case
+
+Camel casing is often used in **programming** to name:
+- **Variables** → `userAge`, `totalPrice`
+- **Functions** → `calculateSum()`, `getUserInfo()`
+- **Class names** (in PascalCase, which is similar) → `PersonDetails`, `StudentRecord`
+
+---
+
+# 10.Import in Python
+
+> **Import** is used to bring in extra code from another file or module so that you can use its functions.
+
+---
+
+## Example of Importing a Module
+
+```python
+import math  # Allows using math functions
+print(math.sqrt(16))  # Outputs: 4.0
+```
+
+---
