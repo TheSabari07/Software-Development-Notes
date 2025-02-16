@@ -89,3 +89,202 @@ if (num % 2 === 0) {
 
 ---
 
+# JavaScript Basics (Sec 2)
+
+---
+
+## Checked Property
+
+The `checked` property is used with checkboxes and radio buttons to determine if they are selected.
+
+### Syntax:
+```js
+document.getElementById("myCheckbox").checked;
+```
+
+### Example:
+
+```html
+<input type="checkbox" id="myCheckbox">
+<button onclick="checkStatus()">Check</button>
+
+<script>
+function checkStatus() {
+    let isChecked = document.getElementById("myCheckbox").checked;
+    console.log("Checked:", isChecked);
+}
+</script>
+```
+
+---
+
+## Ternary Operator (`? :`)
+
+A shortcut for `if-else`, used when there is only **one condition to check**.
+
+### Syntax:
+```js
+condition ? value_if_true : value_if_false;
+```
+
+### Example:
+```js
+let age = 20;
+let status = age >= 18 ? "Adult" : "Minor";
+console.log(status);  // Output: Adult
+```
+
+### When to use instead of `if-else`?
+
+- When you have a simple condition.
+- When you need short and clean code.
+
+---
+
+## Switch Statement
+
+Used as an alternative to multiple `if-else` conditions.
+
+### Syntax:
+```js
+switch(expression) {
+    case value1:
+        // Code to execute
+        break;
+    case value2:
+        // Code to execute
+        break;
+    default:
+        // Code if no cases match
+}
+```
+
+### Example:
+```js
+let day = 3;
+
+switch(day) {
+    case 1:
+        console.log("Monday");
+        break;
+    case 2:
+        console.log("Tuesday");
+        break;
+    case 3:
+        console.log("Wednesday");
+        break;
+    default:
+        console.log("Invalid day");
+}
+```
+
+---
+
+## String Methods
+
+String methods help manipulate text in JavaScript.
+
+| Method | Description | Example |
+| --- | --- | --- |
+| `length` | Returns the length of a string | `"hello".length // 5` |
+| `toUpperCase()` | Converts to uppercase | `"hello".toUpperCase() // "HELLO"` |
+| `toLowerCase()` | Converts to lowercase | `"HELLO".toLowerCase() // "hello"` |
+| `trim()` | Removes spaces from both sides | `" hello ".trim() // "hello"` |
+| `replace()` | Replaces part of a string | `"hello".replace("h", "y") // "yello"` |
+| `split()` | Splits a string into an array | `"a,b,c".split(",") // ["a", "b", "c"]` |
+
+---
+
+## String Slicing
+
+Extracting a portion of a string.
+
+### Syntax:
+```js
+string.slice(start, end);
+```
+
+### Example:
+```js
+let text = "JavaScript";
+console.log(text.slice(0, 4));  // Output: Java
+console.log(text.slice(-6));    // Output: Script
+```
+
+---
+
+## Method Chaining
+
+Calling multiple methods on a single value.
+
+### Example:
+```js
+let result = "  hello world  ".trim().toUpperCase();
+console.log(result); // Output: "HELLO WORLD"
+```
+
+---
+
+## Logical Operators
+
+Used for boolean logic.
+
+| Operator | Name | Example | Output |
+| --- | --- | --- | --- |
+| `&&` | AND | `true && false` | `false` |
+|  | OR | `true OR false` | `true` |
+| `!` | NOT | `!true` | `false` |
+
+
+### OR operator "||"
+---
+
+## Comparison Operators
+
+| Operator | Name | Example | Output |
+| --- | --- | --- | --- |
+| `=` | Assignment | `a = 5` | Assigns 5 to `a` |
+| `==` | Equal to | `5 == "5"` | `true` (only checks value) |
+| `===` | Strictly equal | `5 === "5"` | `false` (checks value and type) |
+| `!=` | Not equal | `5 != "5"` | `false` |
+| `!==` | Strictly not equal | `5 !== "5"` | `true` |
+
+### Difference between `==` and `===`
+
+- `==` compares only values, allowing type conversion.
+- `===` compares both values and types, without conversion.
+
+Example:
+```js
+console.log(5 == "5");  // true
+console.log(5 === "5"); // false
+```
+
+---
+
+## While Loop
+
+Repeats a block of code while a condition is `true`.
+
+### Syntax:
+```js
+while (condition) {
+    // Code to execute
+}
+```
+
+### Example:
+```js
+let i = 0;
+while (i < 5) {
+    console.log(i);
+    i++;
+}
+```
+
+This prints numbers from `0` to `4`. 
+
+---
+
+
+
