@@ -250,3 +250,190 @@ Apple
 
 ```
 ---
+
+
+# JavaScript Basics (sec 2)
+
+## Spread Operator (`...`)
+
+The spread operator (`...`) is used to expand elements of an array or object.
+
+### Syntax:
+```js
+const numbers = [1, 2, 3];
+const newNumbers = [...numbers, 4, 5];
+console.log(newNumbers); // [1, 2, 3, 4, 5]
+
+```
+
+### Use Cases:
+
+- Copying arrays or objects
+- Merging arrays
+- Passing multiple values as function arguments
+
+---
+
+## Rest Parameters (`...`)
+
+Rest parameters allow functions to take an indefinite number of arguments as an array.
+
+### Syntax:
+
+```
+function sum(...numbers) {
+    return numbers.reduce((acc, num) => acc + num, 0);
+}
+console.log(sum(1, 2, 3, 4)); // 10
+
+```
+
+### Use Cases:
+
+- Handling multiple arguments in functions
+- Creating variadic functions
+
+---
+
+## Callback Function
+
+A callback is a function passed as an argument to another function.
+
+### Syntax:
+
+```
+function greet(name, callback) {
+    console.log(`Hello, ${name}`);
+    callback();
+}
+
+greet("John", function() {
+    console.log("This is a callback function.");
+});
+
+```
+
+### Use Cases:
+
+- Asynchronous operations (e.g., API calls, setTimeout)
+- Event handling
+- Functional programming
+
+---
+
+## `forEach()` Method
+
+The `forEach()` method executes a provided function once for each array element.
+
+### Syntax:
+
+```
+const arr = [1, 2, 3];
+arr.forEach(num => console.log(num * 2)); // 2, 4, 6
+
+```
+
+### Use Cases:
+
+- Iterating over arrays
+- Applying logic to each element
+
+---
+
+## `map()` Method
+
+The `map()` method creates a new array by applying a function to each element of the original array.
+
+### Syntax:
+
+```
+const numbers = [1, 2, 3];
+const doubled = numbers.map(num => num * 2);
+console.log(doubled); // [2, 4, 6]
+
+```
+
+### Use Cases:
+
+- Transforming arrays
+- Modifying values while keeping the original array unchanged
+
+---
+
+## `filter()` Method
+
+The `filter()` method creates a new array with elements that pass a given condition.
+
+### Syntax:
+
+```
+const numbers = [1, 2, 3, 4, 5];
+const evenNumbers = numbers.filter(num => num % 2 === 0);
+console.log(evenNumbers); // [2, 4]
+
+```
+
+### Use Cases:
+
+- Filtering elements from arrays
+- Extracting specific data
+
+---
+
+## `reduce()` Method
+
+The `reduce()` method reduces an array to a single value by applying a function.
+
+### Syntax:
+
+```
+const numbers = [1, 2, 3, 4];
+const sum = numbers.reduce((acc, num) => acc + num, 0);
+console.log(sum); // 10
+
+```
+
+### Use Cases:
+
+- Summing array values
+- Aggregating data
+
+---
+
+## Function Expression
+
+A function expression assigns a function to a variable.
+
+### Syntax:
+
+```
+const add = function(a, b) {
+    return a + b;
+};
+console.log(add(2, 3)); // 5
+
+```
+
+### Use Cases:
+
+- Assigning functions to variables
+- Anonymous functions
+
+---
+
+## Arrow Function
+
+Arrow functions provide a concise way to write functions using `=>`.
+
+### Syntax:
+
+```
+const multiply = (a, b) => a * b;
+console.log(multiply(3, 4)); // 12
+
+```
+
+### Use Cases:
+
+- Shorter function syntax
+- Implicit return (when using one expression)
