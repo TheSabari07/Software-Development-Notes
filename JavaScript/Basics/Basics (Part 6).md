@@ -170,5 +170,5 @@ console.log(users[0].name); // John
 ```
 
 ```
-
+---
 ```
