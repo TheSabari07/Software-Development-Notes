@@ -92,3 +92,55 @@ title.style.color = "red";
 
 ```
 
+# 🔹 DOM Navigation in JavaScript  
+
+---
+
+## What is DOM Navigation?  
+
+DOM navigation allows JavaScript to move through the **HTML document tree** and access different elements. It helps in selecting, modifying, and traversing elements dynamically.
+
+---
+
+## 🔹 Parent, Child, and Sibling Elements  
+
+| Property | Description | Example |
+|----------|-------------|---------|
+| `parentNode` | Gets the **parent** of an element. | `element.parentNode` |
+| `childNodes` | Returns a **NodeList** of all child nodes (including text, comments). | `element.childNodes` |
+| `children` | Returns a **collection of child elements** (ignores text, comments). | `element.children` |
+| `firstChild` | Gets the **first child** (includes text, comments). | `element.firstChild` |
+| `firstElementChild` | Gets the **first child element** (ignores text, comments). | `element.firstElementChild` |
+| `lastChild` | Gets the **last child** (includes text, comments). | `element.lastChild` |
+| `lastElementChild` | Gets the **last child element** (ignores text, comments). | `element.lastElementChild` |
+| `nextSibling` | Gets the **next node** (can be text or comment). | `element.nextSibling` |
+| `nextElementSibling` | Gets the **next element** (ignores text, comments). | `element.nextElementSibling` |
+| `previousSibling` | Gets the **previous node** (can be text or comment). | `element.previousSibling` |
+| `previousElementSibling` | Gets the **previous element** (ignores text, comments). | `element.previousElementSibling` |
+
+---
+
+## 🔹 Example: Navigating the DOM  
+
+### Sample HTML:
+```html
+<!DOCTYPE html>
+<html>
+  <body>
+    <div id="container">
+      <p>First paragraph</p>
+      <p id="second">Second paragraph</p>
+      <p>Third paragraph</p>
+    </div>
+    <script>
+      let secondPara = document.getElementById("second");
+
+      console.log(secondPara.parentNode); // Gets the parent <div>
+      console.log(secondPara.previousElementSibling); // Gets first <p>
+      console.log(secondPara.nextElementSibling); // Gets third <p>
+    </script>
+  </body>
+</html>
+
+```
+
