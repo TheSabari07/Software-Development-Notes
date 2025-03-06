@@ -74,15 +74,70 @@ Or manually add React to an HTML file:
 ```
 
 ---
+## JSX (JavaScript XML)
 
-## Understanding JSX
+JSX allows you to write **HTML-like syntax inside JavaScript**.
 
-JSX allows you to write HTML-like syntax in JavaScript.
+### Why JSX?
 
-Example:
+- Makes UI code **easier to read and write**.
+- Allows **embedding JavaScript expressions** inside HTML.
+- Prevents **injection attacks** by escaping values.
+
+### Example of JSX:
 
 ```jsx
 const element = <h1>Hello, React!</h1>;
+
+```
+
+### JSX vs Regular JavaScript
+
+Without JSX, you would write:
+
+```jsx
+const element = React.createElement('h1', {}, 'Hello, React!');
+
+```
+
+With JSX, the same code is simpler:
+
+```jsx
+const element = <h1>Hello, React!</h1>;
+
+```
+
+### Embedding JavaScript in JSX
+
+```jsx
+const name = "Sabari";
+const element = <h1>Hello, {name}!</h1>;
+
+```
+
+### JSX with Multiple Elements
+
+JSX must have **one parent element**.
+
+```jsx
+return (
+    <div>
+        <h1>Heading</h1>
+        <p>Paragraph</p>
+    </div>
+);
+
+```
+
+or use **Fragments** (`<>...</>`)
+
+```jsx
+return (
+    <>
+        <h1>Heading</h1>
+        <p>Paragraph</p>
+    </>
+);
 
 ```
 
@@ -90,18 +145,31 @@ const element = <h1>Hello, React!</h1>;
 
 ## Components in React
 
-There are two types of components:
+Components are **reusable, independent UI pieces**.
 
-| Type | Example |
-| --- | --- |
-| **Function Component** | `function App() { return <h1>Hello</h1>; }` |
-| **Class Component** | `class App extends React.Component { render() { return <h1>Hello</h1>; } }` |
+### Types of Components:
 
-Example of a functional component:
+| Type | Description | Example |
+| --- | --- | --- |
+| **Function Component** | Uses functions to return UI | `function App() { return <h1>Hello</h1>; }` |
+| **Class Component** | Uses ES6 classes | `class App extends React.Component { render() { return <h1>Hello</h1>; } }` |
+
+### Functional Component Example:
 
 ```jsx
 function Welcome() {
     return <h1>Hello, React!</h1>;
+}
+
+```
+
+### Class Component Example:
+
+```jsx
+class Welcome extends React.Component {
+    render() {
+        return <h1>Hello, React!</h1>;
+    }
 }
 
 ```
