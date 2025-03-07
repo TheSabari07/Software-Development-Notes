@@ -245,3 +245,36 @@ let items = document.querySelectorAll("p"); // Selects all <p> elements
 console.log(items); // Displays the NodeList in the console
 
 ```
+
+
+### Key Differences Between NodeList and Array
+
+| Feature | NodeList | Array |
+| --- | --- | --- |
+| Indexed? | Yes | Yes |
+| Looping | Can use `forEach()` | Can use `forEach()`, `map()`, etc. |
+| Modifiable? | No (unless converted) | Yes |
+
+To convert a NodeList to an array:
+
+```
+js
+CopyEdit
+let itemsArray = Array.from(document.querySelectorAll("p"));
+console.log(itemsArray);
+
+```
+
+---
+
+```
+vbnet
+CopyEdit
+
+This Markdown file follows your request with tables, simple explanations, and examples. Let me know if you need any changes.
+
+```
+
+
+
+
