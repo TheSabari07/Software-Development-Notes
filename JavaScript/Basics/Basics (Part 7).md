@@ -143,4 +143,34 @@ DOM navigation allows JavaScript to move through the **HTML document tree** and 
 </html>
 
 ```
+---
 
+
+# JavaScript Events and NodeList
+
+## Mouse Events
+
+Mouse events are actions triggered by the user's mouse actions.
+These events help detect when a user clicks, moves, or interacts with a webpage using a mouse.
+
+### Common Mouse Events
+
+| Event | Description |
+|-------|------------|
+| `click` | Triggered when a user clicks an element |
+| `dblclick` | Triggered when a user double-clicks an element |
+| `mousedown` | Triggered when the mouse button is pressed |
+| `mouseup` | Triggered when the mouse button is released |
+| `mousemove` | Triggered when the mouse moves over an element |
+| `mouseenter` | Triggered when the mouse enters an element |
+| `mouseleave` | Triggered when the mouse leaves an element |
+
+### Example
+
+```js
+document.getElementById("btn").addEventListener("click", function() {
+    alert("Button clicked!");
+});
+```
+
+---
