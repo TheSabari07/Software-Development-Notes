@@ -228,3 +228,20 @@ function showElement() {
 ```
 
 ---
+
+
+## NodeList
+
+A **NodeList** is a collection of elements retrieved using methods like `querySelectorAll()`.
+
+It looks like an array but is not a real JavaScript array.
+
+### Example
+
+```
+js
+CopyEdit
+let items = document.querySelectorAll("p"); // Selects all <p> elements
+console.log(items); // Displays the NodeList in the console
+
+```
