@@ -174,3 +174,57 @@ document.getElementById("btn").addEventListener("click", function() {
 ```
 
 ---
+
+## Key Events
+
+Key events detect when a user presses or releases a key on the keyboard.
+
+These events are useful for handling user input.
+
+### Common Key Events
+
+| Event | Description |
+| --- | --- |
+| `keydown` | Triggered when a key is pressed |
+| `keyup` | Triggered when a key is released |
+| `keypress` | Triggered when a key is pressed and released (deprecated) |
+
+### Example
+
+```
+js
+CopyEdit
+document.addEventListener("keydown", function(event) {
+    console.log("Key Pressed: " + event.key);
+});
+
+```
+
+---
+
+## Hide/Show HTML Elements
+
+We can use JavaScript to hide or show elements dynamically.
+
+### Example
+
+```html
+html
+CopyEdit
+<button onclick="hideElement()">Hide</button>
+<button onclick="showElement()">Show</button>
+<p id="text">This is a paragraph.</p>
+
+<script>
+function hideElement() {
+    document.getElementById("text").style.display = "none";
+}
+
+function showElement() {
+    document.getElementById("text").style.display = "block";
+}
+</script>
+
+```
+
+---
