@@ -267,14 +267,5 @@ console.log(itemsArray);
 
 ---
 
-```
-vbnet
-CopyEdit
-
-This Markdown file follows your request with tables, simple explanations, and examples. Let me know if you need any changes.
-
-```
-
-
 
 
