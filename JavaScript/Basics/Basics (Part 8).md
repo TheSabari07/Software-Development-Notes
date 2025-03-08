@@ -28,3 +28,35 @@ console.log(element.classList.contains("highlight")); // Checks if 'highlight' e
 
 ---
 
+## Promises
+
+A Promise in JavaScript is used to handle asynchronous operations. It represents a value that may be available now, later, or never.
+
+### States of a Promise
+
+| State       | Description |
+|------------|------------|
+| `pending`  | The operation is in progress. |
+| `fulfilled` | The operation completed successfully. |
+| `rejected` | The operation failed. |
+
+### Example
+
+```js
+let myPromise = new Promise((resolve, reject) => {
+    let success = true;
+    if (success) {
+        resolve("Operation successful");
+    } else {
+        reject("Operation failed");
+    }
+});
+
+myPromise
+    .then(result => console.log(result)) // Runs if resolved
+    .catch(error => console.log(error)); // Runs if rejected
+```
+
+---
+
+---
