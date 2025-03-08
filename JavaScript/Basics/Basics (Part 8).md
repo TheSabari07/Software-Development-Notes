@@ -60,3 +60,27 @@ myPromise
 ---
 
 ---
+
+## Async and Await
+
+`async` and `await` are used to work with Promises in a simpler way.
+
+### Key Points
+
+- `async` makes a function return a Promise.
+- `await` pauses the execution until the Promise is resolved.
+
+### Example
+
+```js
+async function fetchData() {
+    let response = await fetch("https://jsonplaceholder.typicode.com/todos/1");
+    let data = await response.json();
+    console.log(data);
+}
+
+fetchData();
+```
+
+In this example, `await` ensures that `fetch()` and `response.json()` complete before proceeding.
+---
