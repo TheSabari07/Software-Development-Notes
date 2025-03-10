@@ -23,3 +23,30 @@ Here, the `name` prop is passed from `App` to `Greeting`, which then displa
 
 ---
 
+## What is Conditional Rendering?
+
+Conditional rendering allows a component to display different content based on a condition.
+
+### Example of Conditional Rendering
+
+```jsx
+jsx
+CopyEdit
+function WelcomeMessage(props) {
+  if (props.isLoggedIn) {
+    return <h1>Welcome back!</h1>;
+  } else {
+    return <h1>Please log in.</h1>;
+  }
+}
+
+function App() {
+  return <WelcomeMessage isLoggedIn={true} />;
+}
+
+```
+
+If `isLoggedIn` is `true`, it shows "Welcome back!". Otherwise, it shows "Please log in."
+
+---
+
