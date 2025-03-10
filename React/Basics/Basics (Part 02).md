@@ -50,3 +50,69 @@ If `isLoggedIn` is `true`, it shows "Welcome back!". Otherwise, it shows "Ple
 
 ---
 
+## What is a List in React?
+
+A **list** in React is an array of elements rendered dynamically using `.map()`.
+
+### Example of a List
+
+```jsx
+jsx
+CopyEdit
+function NameList() {
+  const names = ["Alice", "Bob", "Charlie"];
+  return (
+    <ul>
+      {names.map((name) => (
+        <li>{name}</li>
+      ))}
+    </ul>
+  );
+}
+
+```
+
+This will render:
+
+- Alice
+- Bob
+- Charlie
+
+---
+
+## What are List Keys?
+
+A **key** is a unique identifier used to help React track and update list items efficiently. Without keys, React may re-render items incorrectly.
+
+### Example with Keys
+
+```jsx
+jsx
+CopyEdit
+function NameList() {
+  const names = ["Alice", "Bob", "Charlie"];
+  return (
+    <ul>
+      {names.map((name, index) => (
+        <li key={index}>{name}</li>
+      ))}
+    </ul>
+  );
+}
+
+```
+
+Here, `key={index}` ensures each list item has a unique identity.
+
+---
+
+**Summary Table**
+
+| Concept | Explanation |
+| --- | --- |
+| **Props** | Pass data from parent to child component |
+| **Conditional Rendering** | Show different content based on conditions |
+| **List** | Render multiple elements dynamically |
+| **List Keys** | Unique identifiers for list items |
+
+---
