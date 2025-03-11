@@ -65,3 +65,51 @@ function HookExample() {
 ```
 
 ---
+
+
+## State in React
+- `State` is used to store data that can change over time.
+- In functional components, `useState` is used to manage state.
+
+#### Example:
+```jsx
+import { useState } from 'react';
+
+function StateExample() {
+  const [message, setMessage] = useState("Hello!");
+
+  return (
+    <div>
+      <p>{message}</p>
+      <button onClick={() => setMessage("Welcome to React!")}>Change Text</button>
+    </div>
+  );
+}
+```
+
+---
+
+## Multiple States in Hooks
+- We can use `useState` multiple times to manage different states in a component.
+
+#### Example:
+```jsx
+import { useState } from 'react';
+
+function MultipleStateExample() {
+  const [name, setName] = useState("John");
+  const [age, setAge] = useState(25);
+
+  return (
+    <div>
+      <p>Name: {name}</p>
+      <p>Age: {age}</p>
+      <button onClick={() => setAge(age + 1)}>Increase Age</button>
+    </div>
+  );
+}
+```
+
+---
+
+
