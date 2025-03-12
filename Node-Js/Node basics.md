@@ -47,3 +47,41 @@ Ryan Dahl wanted to improve how web applications handle multiple connections sim
 | **NPM Launched** | 2010 |
 
 ---
+
+##  Basic Information
+
+| Property | Details |
+|----------|---------|
+| **Latest Version** | Continuously updated (Check [Node.js Official Website](https://nodejs.org)) |
+| **Written In** | C, C++, JavaScript |
+| **License** | MIT |
+| **Official Website** | [nodejs.org](https://nodejs.org) |
+
+---
+
+##  How Does Node.js Work?
+
+1. Uses **V8 Engine** to compile JavaScript into machine code.
+2. Operates on a **single-threaded, event-driven model**.
+3. Uses **asynchronous I/O operations** to handle multiple connections efficiently.
+4. Features **non-blocking APIs**, making it ideal for real-time applications.
+
+---
+
+##  Common Use Cases
+
+- **Web Servers** (e.g., Express.js, Koa.js)
+- **API Development** (REST & GraphQL APIs)
+- **Real-Time Applications** (Chat apps, streaming services)
+- **Microservices Architecture**
+- **Command-Line Tools**
+
+---
+
+##  Conclusion
+
+Node.js revolutionized backend development by introducing an efficient, event-driven, and scalable runtime environment. It is widely used in modern web development for building fast, scalable, and real-time applications.
+
+---
+
+
